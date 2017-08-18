@@ -5,33 +5,29 @@ using namespace std;
 
 int main()
 {
-    int testy, ile, suma;
-    double ciastka, *czas, doba = 86400, suma2;
+    int tests, gluttons, intSum;
+    double cookies, *time, day = 86400, doubleSum;
 
-    cin >> testy;
+    cin >> tests;
 
-    for(int i = 0; i < testy; i++)
-    {
-        suma2 = suma = 0;
+    for(int i = 0; i < tests; i++){
+        cin >> gluttons;
+        cin >> cookies;
 
-        cin >> ile;
+		time = new double [gluttons];
+		doubleSum = intSum = 0;
 
-        czas = new double [ile];
-
-        cin >> ciastka;
-
-        for (int i = 0; i < ile; i++)
-        {
-            cin >> czas[i];
-            suma += doba / czas[i];
+        for (int i = 0; i < gluttons; i++){
+            cin >> time[i];
+            intSum += day / time[i];
         }
 
-        suma2 = suma;
+        doubleSum = intSum;
 
-        cout << ceil(suma2 / ciastka) << endl;
+        cout << ceil(doubleSum / cookies) << endl;
 
-        delete [] czas;
-        czas=NULL;
+        delete [] time;
+        time=NULL;
     }
 
 
